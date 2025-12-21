@@ -1,5 +1,8 @@
 # -Titanic-Survival-Prediction-Binary-Classification-
 
+link for the dataset : https://www.kaggle.com/competitions/titanic/data 
+
+
 # Titanic – Machine Learning from Disaster
 
 **Project Type:** Machine Learning / Binary Classification  
