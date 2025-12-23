@@ -159,7 +159,6 @@ All visualizations are generated inside the Jupyter Notebook.
 ![Confusion Matrix](https://github.com/chourouk-sun/Titanic-Survival-Prediction-Binary-Classification/blob/02a62e13eea3a7536d33ae354b6e350e1a5c3f40/images/image1.png)
 
 ### What each value means
-
 The confusion matrix shows the performance of the Logistic Regression classifier on the validation set.
 
 * **True Negatives (90)**
@@ -206,6 +205,48 @@ This visualization shows the **distribution of survival predictions** generated 
 * The model predicts more non-survivors than survivors
 * Predictions align with historical survival patterns
 * Serves as a sanity check for model behavior
+
+---
+## Predicted Survival by Gender
+
+![Predicted Survival by Gender](https://github.com/chourouk-sun/Titanic-Survival-Prediction-Binary-Classification/blob/918ceb65941cd90808685e327a5338f0130dd577/images/image4.png)
+
+This visualization shows the **model’s predicted survival outcomes** grouped by **gender**.
+* The x-axis represents **Sex** (`male`, `female`).
+* The y-axis represents the **count of passengers**.
+* The color (hue) indicates the **predicted survival label**:
+  * `0` → Not Survived
+  * `1` → Survived
+
+**Interpretation:**
+* The model predicts that **most male passengers did not survive**, as shown by the high count of males labeled `0`.
+* In contrast, **most female passengers are predicted to survive**, with a significantly higher count labeled `1`.
+* Very few females are predicted as non-survivors, and very few males are predicted as survivors.
+
+**Conclusion:**
+This plot indicates that **gender has a strong influence on the model’s predictions**, with females having a much higher predicted survival rate than males. This pattern aligns with the historical Titanic survival trend where women were more likely to survive than men.
+
+---
+## Predicted Survival by Passenger Class
+![Survival by Passenger Clas ](https://github.com/chourouk-sun/Titanic-Survival-Prediction-Binary-Classification/blob/492f13936a2082ad1399b900acf63846acd0f419/images/image5.png)
+
+This visualization shows the **model’s predicted survival outcomes** across different **passenger classes (Pclass)**.
+* The x-axis represents **Passenger Class**:
+  * `1` → First Class
+  * `2` → Second Class
+  * `3` → Third Class
+* The y-axis represents the **number of passengers**.
+* The color (hue) indicates the **predicted survival label**:
+  * `0` → Not Survived
+  * `1` → Survived
+
+**Interpretation:**
+* **First-class passengers (Pclass = 1)** have a higher number of predicted survivors than non-survivors, indicating the model associates first class with better survival chances.
+* **Second-class passengers (Pclass = 2)** show fewer predicted survivors compared to non-survivors, suggesting a moderate survival probability.
+* **Third-class passengers (Pclass = 3)** have a significantly higher number of predicted non-survivors, indicating the lowest predicted survival rate among all classes.
+
+**Conclusion:**
+The model strongly associates **passenger class with survival probability**. Higher-class passengers are predicted to have better survival outcomes, while third-class passengers are predicted to be at the highest risk. This reflects the historical reality of the Titanic disaster, where access to lifeboats and evacuation priority varied by class.
 
 ---
 ## Future Improvements
